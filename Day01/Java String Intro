@@ -1,0 +1,42 @@
+/*
+ * Problem: Java String Introduction
+ * Platform: HackerRank
+ *
+ * Approach:
+ * 1. Read two strings A and B.
+ * 2. Print the sum of their lengths.
+ * 3. Compare first characters lexicographically to determine if A > B.
+ * 4. Capitalize the first character of both strings and print them.
+ *
+ * Time Complexity: O(n + m)
+ * Space Complexity: O(n + m)
+ */
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        int sum=A.length()+B.length();
+        System.out.println(sum);
+        if(A.charAt(0)>B.charAt(0))
+        {
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+        String A1= Character.toUpperCase(A.charAt(0))+A.substring(1);
+        String B1=Character.toUpperCase(B.charAt(0))+B.substring(1);
+        System.out.println(A1+" "+B1);
+        
+    }
+}
+
+
+
